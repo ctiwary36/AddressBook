@@ -8,7 +8,7 @@ public class AddressBook {
             //printing welcome massage
             //creating object for address
             //taking input from user
-            //printing adress detail
+            //printing address detail
             //giving option to user to add or view address
             System.out.println("Welcome to Address Book Program");
 
@@ -59,6 +59,7 @@ public class AddressBook {
                         break;
                     case 3:
                         System.out.println("Edit record");
+                        //code for edit the address
                         System.out.println("Enter name to edit:");
                         for(int i=0;i<list.size();i++){
                             address1=list.get(i);
@@ -105,9 +106,23 @@ public class AddressBook {
                             }
                         }
                         break;
-
+                        //code for remove address
                     case 4:
-                        return;
+                        System.out.println("remove record");
+                        System.out.println("Enter name to remove:");
+                        for(int i=0;i<list.size();i++){
+                            address1=list.get(i);
+                            if(sc.nextLine().equals(address1.getFirstname())) {
+                                list.remove(address1);
+                                System.out.println("List After removing"+list);
+                            }
+                            else {
+                                System.out.println("User not found");
+                            }
+                        }
+                        break;
+                    case 5:
+                        System.out.println("please enter valid option");
                 }
 
 
